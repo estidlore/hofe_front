@@ -1,0 +1,71 @@
+:root {
+  --bs-gray: #888888;
+  --bs-primary-light: #8067A2;
+  /*#715698*/
+  --bs-primary: #60418B;
+  --bs-primary-dark: #4D346F;
+  /*#553A7B*/
+  --bs-secondary-light: #6688A2;
+  --bs-secondary: #406B8A;
+  --bs-secondary-dark: #33556F;
+  --bs-light: #dddddd;
+  --bs-dark-light: #333333;
+  --bs-dark: #222222;
+  --bs-dark-dark: #111111;
+  --bs-success: #198754;
+  --bs-info: #418B60;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-color: var(--bs-dark);
+  --bs-bg-color: var(--bs-light);
+}
+
+.primary, .secondary, .light, .dark {
+  color: var(--bs-color) !important;
+  background-color: var(--bs-bg-color) !important;
+}
+
+.primary, .secondary, .dark {
+  --bs-color: var(--bs-light);
+}
+
+.light {
+  --bs-color: var(--bs-dark);
+}
+
+.primary {
+  --bs-bg-color: var(--bs-primary);
+}
+
+.secondary {
+  --bs-bg-color: var(--bs-secondary);
+}
+
+.light {
+  --bs-bg-color: var(--bs-light);
+}
+
+.dark {
+  --bs-bg-color: var(--bs-dark);
+}
+
+button {
+  border-color: var(--bs-bg-color, 0.5);
+}
+
+button:hover {
+  filter: brightness(0.8);
+}
+
+button:focus {
+  box-shadow: 0 0 0.5em var(--bs-color) !important;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  opacity: 0.6;
+}

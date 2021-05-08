@@ -16,12 +16,13 @@ function Home() {
         <img src="./home_bg.jpg" className="img-fluid col-12" />
         <div className="position-absolute bottom-0 m-5">
           <div className="my-2">
-            <button className="btn primary">Gana dinero</button>
+            <button className="btn info">Gana dinero</button>
           </div>
           <div className="my-2">
-            <button className="btn primary">Contrata ahora</button>
+            <button className="btn info">Contrata ahora</button>
           </div>
         </div>
+        
       </div>
 
       <div className="container m-5 mx-auto">

@@ -1,37 +1,30 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 class NavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      small_dev: window.innerWidth < 576,
-      show_menu: false
+      loggedIn: false
     }
   }
 
   render() {
     return (
       <nav className="navbar navbar-expand px-5 justify-content-between primary">
-        <a href="#" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img src="../logo192.png" className="col-2" />
-        </a>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a href="#" className="nav-link">Unirse</a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">Ingresar</a>
-            </li>
-          </ul>
+        </Link>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/sign-up" className="nav-link">Unirse</Link>
+          </li>
+          <li className="nav-item ms-4">
+            <Link to="/sign-in" className="nav-link">Ingresar</Link>
+          </li>
+        </ul>
       </nav>
     )
-  }
-
-  toggleMenu = () => {
-    this.setState({
-      show_menu: !this.state.show_menu
-    })
-    console.log(this.state.show_menu)
   }
 }
 

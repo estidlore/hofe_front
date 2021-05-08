@@ -1,33 +1,36 @@
 import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import SignIn from './views/SignIn';
 import NavBar from './components/NavBar';
-import React, {Component} from 'react'
+import SignIn from './views/SignIn';
+import SignUp from './views/SignUp';
 import Home from './views/Home';
 import Footer from './components/Footer';
 
-export class App extends Component {
-  constructor(props) {
-    super(props)
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-    this.state = {
-      page: 'sign_in'
-    }
-  }
-
-  render() {
-    const {page} = this.state.page
-
-    var v = page === 'sign_in' ? <SignIn /> : <Home />
-    return (
-      <div className="App">
+function App() {
+  return (
+    <div className="App">
+      <Router>
         <NavBar />
-        {v}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn />
+          </Route>
+          <Route exact path="/sign-up">
+            <SignUp /> 
+          </Route>
+        </Switch>
         <Footer />
-      </div>
-    )
-  }
+      </Router>
+
+    </div>
+  )
 }
 
 export default App

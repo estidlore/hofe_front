@@ -1,31 +1,27 @@
 :root {
+  /*
+  Nice analog colors:
+  #8B416C #85418B #60418B #41478B #416C8B
+  */
   --bs-gray: #888888;
-  --bs-primary-light: #8067A2;
-  /*#715698*/
   --bs-primary: #60418B;
-  --bs-primary-dark: #4D346F;
-  /*#553A7B*/
-  --bs-secondary-light: #6688A2;
-  --bs-secondary: #406B8A;
-  --bs-secondary-dark: #33556F;
+  --bs-secondary: #8B416C;
   --bs-light: #dddddd;
-  --bs-dark-light: #333333;
   --bs-dark: #222222;
-  --bs-dark-dark: #111111;
   --bs-success: #198754;
-  --bs-info: #418B60;
+  --bs-info: #406B8A;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-color: var(--bs-dark);
   --bs-bg-color: var(--bs-light);
 }
 
-.primary, .secondary, .light, .dark {
+.primary, .secondary, .light, .dark, .info, .success {
   color: var(--bs-color) !important;
   background-color: var(--bs-bg-color) !important;
 }
 
-.primary, .secondary, .dark {
+.primary, .secondary, .light, .dark, .info, .success {
   --bs-color: var(--bs-light);
 }
 
@@ -47,6 +43,14 @@
 
 .dark {
   --bs-bg-color: var(--bs-dark);
+}
+
+.info {
+  --bs-bg-color: var(--bs-info);
+}
+
+.success {
+  --bs-bg-color: var(--bs-success);
 }
 
 button {

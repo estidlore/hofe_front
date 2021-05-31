@@ -8,6 +8,7 @@ import Home from './views/Home';
 import CandidateInfo from './views/CandidateInfo';
 import OfferInfo from './views/OfferInfo';
 import PorfileCompany from './views/PorfileCompany';
+import CandidatesList from './views/CandidatesList';
 import Footer from './components/Footer';
 
 import React from 'react'
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route exact path="/porfile-company">
             <PorfileCompany /> 
+          </Route>
+          <Route exact path="/list-candidates">
+            <CandidatesList /> 
           </Route>
         </Switch>
         <Footer />

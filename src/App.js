@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -7,7 +6,7 @@ import SignUp from './views/SignUp';
 import Home from './views/Home';
 import CandidateInfo from './views/CandidateInfo';
 import OfferInfo from './views/OfferInfo';
-import PorfileCompany from './views/PorfileCompany';
+import ProfileCompany from './views/ProfileCompany';
 import CandidatesList from './views/CandidatesList';
 import Offers from './views/Offers';
 import PorfileCandidate from './views/PorfileCandidate';
@@ -15,6 +14,7 @@ import Footer from './components/Footer';
 
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import CreateVacant from './views/vacant/CreateVacant';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
+
           <Route exact path="/">
             <Home />
           </Route>
@@ -31,23 +32,28 @@ function App() {
           <Route exact path="/sign-up">
             <SignUp /> 
           </Route>
+
+          <Route exact path="/create-vacant">
+            <CreateVacant /> 
+          </Route>
+
           <Route exact path="/candidate-info">
             <CandidateInfo /> 
           </Route>
           <Route exact path="/offer-info">
             <OfferInfo /> 
           </Route>
-          <Route exact path="/porfile-company">
-            <PorfileCompany /> 
+
+          <Route exact path="/profile-company">
+            <ProfileCompany /> 
           </Route>
+
           <Route exact path="/list-candidates">
             <CandidatesList /> 
           </Route>
+
           <Route exact path="/offers">
             <Offers /> 
-          </Route>
-          <Route exact path="/porfile-candidate">
-            <PorfileCandidate /> 
           </Route>
         </Switch>
         <Footer />

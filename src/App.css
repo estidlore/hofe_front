@@ -3,11 +3,13 @@
   Nice analog colors:
   #8B416C #85418B #60418B #41478B #416C8B
   */
-  --bs-gray: #888888;
   --bs-primary: #60418B;
   --bs-secondary: #8B416C;
-  --bs-light: #dddddd;
+  --bs-light: #f8f8f8;
   --bs-dark: #222222;
+  --bs-gray: #888888;
+  --bs-gray-light: #cccccc;
+  --bs-gray-dark: #444444;
   --bs-success: #198754;
   --bs-info: #406B8A;
   --bs-warning: #ffc107;
@@ -16,17 +18,21 @@
   --bs-bg-color: var(--bs-light);
 }
 
-.primary, .secondary, .light, .dark, .info, .success {
+.primary, .secondary, .light, .dark, .gray-light, .gray-dark, .info, .success {
   color: var(--bs-color) !important;
   background-color: var(--bs-bg-color) !important;
 }
 
-.primary, .secondary, .light, .dark, .info, .success {
+.primary, .secondary, .dark, .gray-dark, .info, .success {
   --bs-color: var(--bs-light);
 }
 
-.light {
+.light, .gray-light {
   --bs-color: var(--bs-dark);
+}
+
+input {
+  background-color: rgba(122, 122, 122, 0.1) !important;
 }
 
 .primary {
@@ -43,6 +49,14 @@
 
 .dark {
   --bs-bg-color: var(--bs-dark);
+}
+
+.gray-light {
+  --bs-bg-color: var(--bs-gray-light);
+}
+
+.gray-dark {
+  --bs-bg-color: var(--bs-gray-dark);
 }
 
 .info {

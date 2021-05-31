@@ -4,6 +4,11 @@ import NavBar from './components/NavBar';
 import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';
 import Home from './views/Home';
+import CandidateInfo from './views/CandidateInfo';
+import OfferInfo from './views/OfferInfo';
+import PorfileCompany from './views/ProfileCompany';
+import CandidatesList from './views/CandidatesList';
+import Offers from './views/Offers';
 import Footer from './components/Footer';
 
 import React from 'react'
@@ -31,6 +36,21 @@ function App() {
             <CreateVacant /> 
           </Route>
 
+          <Route exact path="/candidate-info">
+            <CandidateInfo /> 
+          </Route>
+          <Route exact path="/offer-info">
+            <OfferInfo /> 
+          </Route>
+          <Route exact path="/profile-company">
+            <PorfileCompany /> 
+          </Route>
+          <Route exact path="/list-candidates">
+            <CandidatesList /> 
+          </Route>
+          <Route exact path="/offers">
+            <Offers /> 
+          </Route>
         </Switch>
         <Footer />
       </Router>

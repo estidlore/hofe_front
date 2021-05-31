@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <div className="light p-2">
@@ -12,18 +12,7 @@ function Home() {
         </span>
       </div>
 
-      <div className="position-relative secondary">
-        <img src="./home_bg.jpg" className="img-fluid col-12" />
-        <div className="position-absolute bottom-0 m-5">
-          <div className="my-2">
-            <button className="btn info">Gana dinero</button>
-          </div>
-          <div className="my-2">
-            <button className="btn info">Contrata ahora</button>
-          </div>
-        </div>
-        
-      </div>
+      <img src="./home_bg.jpg" className="img-fluid col-12" />
 
       <div className="container m-5 mx-auto">
         <h3 className="my-4">¿Buscas un empleo sin sesgo?</h3>
@@ -62,5 +51,3 @@ function Home() {
     )
   }
 }
-
-export default Home

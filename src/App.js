@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -9,6 +8,7 @@ import Footer from './components/Footer';
 
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import CreateVacant from './views/vacant/CreateVacant';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
+
           <Route exact path="/">
             <Home />
           </Route>
@@ -25,6 +26,11 @@ function App() {
           <Route exact path="/sign-up">
             <SignUp /> 
           </Route>
+
+          <Route exact path="/create-vacant">
+            <CreateVacant /> 
+          </Route>
+
         </Switch>
         <Footer />
       </Router>

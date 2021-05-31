@@ -22,9 +22,11 @@ class NavBar extends Component {
           <li className="nav-item ms-4">
             <Link to="/sign-in" className="nav-link">Ingresar</Link>
           </li>  
-           
           <li className="nav-item ms-4">
             <Link to="/offers" className="nav-link">Ofertas</Link>
+          </li> 
+          <li className="nav-item ms-4">
+            <Link to="/porfile-candidate" className="nav-link">Perfil Candidato</Link>
           </li>  
         </ul>
       </nav>

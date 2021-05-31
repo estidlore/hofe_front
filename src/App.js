@@ -6,7 +6,7 @@ import SignUp from './views/SignUp';
 import Home from './views/Home';
 import CandidateInfo from './views/CandidateInfo';
 import OfferInfo from './views/OfferInfo';
-import PorfileCompany from './views/ProfileCompany';
+import ProfileCompany from './views/ProfileCompany';
 import CandidatesList from './views/CandidatesList';
 import Offers from './views/Offers';
 import Footer from './components/Footer';
@@ -42,15 +42,19 @@ function App() {
           <Route exact path="/offer-info">
             <OfferInfo /> 
           </Route>
+
           <Route exact path="/profile-company">
-            <PorfileCompany /> 
+            <ProfileCompany /> 
           </Route>
+
           <Route exact path="/list-candidates">
             <CandidatesList /> 
           </Route>
+
           <Route exact path="/offers">
             <Offers /> 
           </Route>
+
         </Switch>
         <Footer />
       </Router>

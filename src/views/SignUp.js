@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Field from '../components/Field';
 import Selector from '../components/Selector';
+import { useHistory } from "react-router-dom";
 import axios from 'axios'
 
 export default function SignUp() {
@@ -12,12 +13,14 @@ export default function SignUp() {
   const [password2, setPassword2] = useState("")
 
   const userTypes = [{
-    value: "candidate",
+    value: "person",
     text: "Candidato"
   }, {
     value: "enterprise",
     text: "Empresa"
   }];
+
+  const history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -27,23 +30,29 @@ export default function SignUp() {
       return;
     }
     var data = {
-      userType: userType,
-      name: name,
-      lastName: lastName,
-      email: email,
-      password: password
-    }
+      "type": "person",
+      "id": "1000948840",
+      "name": "Wilson Andres",
+      "last_name": "Camargo",
+      "email": "wilsonanca@icloud.com",
+      "password": "iPassword",
+      "phone": "3005586516"
+    };
     data = JSON.stringify(data);
     console.log("data: " + data);
     axios({
       url: "https://hofe.herokuapp.com/sign_up",
       method: 'POST',
+      headers: [
+        'Some header'
+      ],
       data: data,
-    }) .then((response) => {
+    }).then((response) => {
       console.log("response: " + response);
     }).catch((error) => {
       console.log("error: " + error);
     });
+    history.push("/");
   }
 
   return (

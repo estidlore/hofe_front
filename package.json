@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://hofe.herokuapp.com/",
+  "proxy": "https://hofe.herokuapp.com",
   "eslintConfig": {
     "extends": [
       "react-app",

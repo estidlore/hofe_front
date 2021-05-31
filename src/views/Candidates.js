@@ -86,7 +86,7 @@ export default function Candidates() {
             <p className="text-center rounded dark">{num}</p>
           </span>
           <div className="col-10 col-md-9 col-lg-10">
-            <p class="bg-secondary text-white">{text}</p>
+            <p>{text}</p>
           </div>
         </div>
       </div>

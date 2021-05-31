@@ -5,6 +5,8 @@ import NavBar from './components/NavBar';
 import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';
 import Home from './views/Home';
+import CandidateInfo from './views/CandidateInfo';
+import OfferInfo from './views/OfferInfo';
 import Footer from './components/Footer';
 
 import React from 'react'
@@ -24,6 +26,12 @@ function App() {
           </Route>
           <Route exact path="/sign-up">
             <SignUp /> 
+          </Route>
+          <Route exact path="/candidate-info">
+            <CandidateInfo /> 
+          </Route>
+          <Route exact path="/offer-info">
+            <OfferInfo /> 
           </Route>
         </Switch>
         <Footer />

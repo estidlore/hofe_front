@@ -3,15 +3,6 @@ import React from 'react'
 export default function Home() {
   return (
     <div>
-      <div className="light p-2">
-        <span className="m-2">
-          <a href="#">¿Cómo funciona?</a>
-        </span>
-        <span className="nav-item m-2">
-          <a href="#">Buscar ofertas</a>
-        </span>
-      </div>
-
       <img src="./home_bg.jpg" className="img-fluid col-12" />
 
       <div className="container m-5 mx-auto">

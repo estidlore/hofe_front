@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
         <div className="row">
           <div className="col-12 col-md-4 p-2">
             <h5>HOFE</h5>
-            <div><a href="">Igualdad</a></div>
-            <div><a href="">Buscar ofertas</a></div>
-            <div><a href="">Buscar aspirantes</a></div>
+            <div><Link to="/">Igualdad</Link></div>
+            <div><Link to="/offers">Buscar ofertas</Link></div>
+            <div><Link to="/candidates">Buscar aspirantes</Link></div>
           </div>
           <div className="col-12 col-md-4 p-2">
             <h5>Sobre nosotros</h5>

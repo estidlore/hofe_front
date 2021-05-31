@@ -16,7 +16,7 @@ export default function SignIn() {
   return (
     <div className="container-fluid p-0 m-0 row justify-content-center gray-light">
       <div className="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4 p-5 light">
-        <form>
+        <form action="/login">
           <h3 className="text-center">Iniciar Sesión</h3>
 
           <Field type="email" id="email" label="Correo"

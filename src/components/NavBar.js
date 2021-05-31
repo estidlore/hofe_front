@@ -24,8 +24,8 @@ export default class NavBar extends Component {
       list = (
         <ul className="navbar-nav">
           <A link="profile" text="Perfil" />
-          <A link="vacants" text="Vacantes" />
-          <A link="postulations" text="Postulaciones" />
+          <A link="offers" text="Ofertas" />
+          <A link="candidates" text="Candidatos" />
         </ul>
       );
     } else { // enterprise

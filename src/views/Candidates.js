@@ -1,7 +1,7 @@
 import React from 'react'
 import Selector from '../components/Selector'
 
-function CandidatesList() {
+export default function Candidates() {
 
   const userTypes = [{
     value: "cargo",
@@ -93,5 +93,3 @@ function CandidatesList() {
     )
   }
 }
-export default CandidatesList
-

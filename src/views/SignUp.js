@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Field from '../components/Field';
 import Selector from '../components/Selector';
+import axios from 'axios'
 
 export default function SignUp() {
   const [userType, setUserType] = useState("")
@@ -18,7 +19,9 @@ export default function SignUp() {
     text: "Empresa"
   }];
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(password.toString() + " vs " + password2.toString());
     if (password !== password2) {
       console.log("Passwords do not match");
       return;
@@ -30,26 +33,42 @@ export default function SignUp() {
       email: email,
       password: password
     }
-    console.log(data);
+    data = JSON.stringify(data);
+    console.log("data: " + data);
+    axios({
+      url: "https://hofe.herokuapp.com/sign_up",
+      method: 'POST',
+      data: data,
+    }) .then((response) => {
+      console.log("response: " + response);
+    }).catch((error) => {
+      console.log("error: " + error);
+    });
   }
 
   return (
     <div className="container-fluid p-0 m-0 row justify-content-center gray-light">
       <div className="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4 p-5 light">
-        <form>
+        <form onSubmit={onSubmit}>
           <h3 className="text-center">Registrarse</h3>
 
-          <Selector label="Tipo de usuario" options={userTypes} onChange={setUserType} />
+          <Selector label="Tipo de usuario" options={userTypes}
+            onChange={(e) => setUserType(e.target.value)} />
           <Field type="text" id="name" label="Nombre"
-            placeholder="Entre 4 y 40 caracteres" onChange={setName} />
+            placeholder="Entre 4 y 40 caracteres"
+            onChange={(e) => setName(e.target.value)} />
           <Field type="text" id="last_name" label="Apellido"
-            placeholder="Entre 4 y 30 caracteres" onChange={setLastName} />
+            placeholder="Entre 4 y 30 caracteres"
+            onChange={(e) => setLastName(e.target.value)} />
           <Field type="email" id="email" label="Correo"
-            placeholder="ejemplo@dominio.com" onChange={setEmail} />
+            placeholder="ejemplo@dominio.com"
+            onChange={(e) => setEmail(e.target.value)} />
           <Field type="password" id="pass" label="Contraseña"
-            placeholder="Entre 8 y 24 caracteres" onChange={setPassword} />
+            placeholder="Entre 8 y 24 caracteres"
+            onChange={(e) => setPassword(e.target.value)} />
           <Field type="password" id="pass2" label="Repetir contraseña"
-            placeholder="Entre 8 y 24 caracteres" onChange={setPassword2} />
+            placeholder="Entre 8 y 24 caracteres"
+            onChange={(e) => setPassword2(e.target.value)} />
 
           <div className="form-group">
             <div className="custom-control custom-checkbox">
@@ -62,7 +81,7 @@ export default function SignUp() {
           </p>
 
           <div className="text-center">
-            <button type="submit" className="btn btn primary btn-block my-3" onSubmit={onSubmit}>
+            <button type="submit" className="btn btn primary btn-block my-3">
               Registrarse
             </button>
           </div>

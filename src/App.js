@@ -9,6 +9,7 @@ import OfferInfo from './views/OfferInfo';
 import Profile from './views/Profile';
 import Candidates from './views/Candidates';
 import Offers from './views/Offers';
+import PorfileCandidate from './views/PorfileCandidate';
 import Footer from './components/Footer';
 
 import React from 'react';

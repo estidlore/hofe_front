@@ -42,6 +42,20 @@ export default class NavBar extends Component {
         <Link to="/" className="navbar-brand">
           <img src="../logo192.png" className="col-2" />
         </Link>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/sign-up" className="nav-link">Unirse</Link>
+          </li>
+          <li className="nav-item ms-4">
+            <Link to="/sign-in" className="nav-link">Ingresar</Link>
+          </li>  
+          <li className="nav-item ms-4">
+            <Link to="/offers" className="nav-link">Ofertas</Link>
+          </li> 
+          <li className="nav-item ms-4">
+            <Link to="/porfile-candidate" className="nav-link">Perfil Candidato</Link>
+          </li>  
+        </ul>
         {list}
       </nav>
     );

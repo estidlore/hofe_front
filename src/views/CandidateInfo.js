@@ -15,25 +15,10 @@ function CandidateInfo() {
         </span>
       </div>
 
-      {/* <div className="position-relative secondary">
-        <img src="./home_bg.jpg" className="img-fluid col-12" />
-        <div className="position-absolute bottom-0 m-5">
-          <div className="my-2">
-            <button className="btn info">Gana dinero</button>
-          </div>
-          <div className="my-2">
-            <button className="btn info">Contrata ahora</button>
-          </div>
-        </div>
-        
-      </div> */}
   
       <div className="container m-5 mx-auto">
-        <h3 className="my-4">Junior Deveeloper</h3>
+        <h3 className="my-4">Desarrollador Junior</h3>
      
-
-       
-            
             <div className="border" class = "shadow-lg p-4 mb-4 bg-white">
                 <div className="container m-5 mx-auto" >
                     <div className="row">     

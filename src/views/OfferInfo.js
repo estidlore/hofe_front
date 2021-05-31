@@ -15,21 +15,9 @@ function OfferInfo() {
         </span>
       </div>
 
-      {/* <div className="position-relative secondary">
-        <img src="./home_bg.jpg" className="img-fluid col-12" />
-        <div className="position-absolute bottom-0 m-5">
-          <div className="my-2">
-            <button className="btn info">Gana dinero</button>
-          </div>
-          <div className="my-2">
-            <button className="btn info">Contrata ahora</button>
-          </div>
-        </div>
-        
-      </div> */}
   
       <div className="container m-5 mx-auto">
-        <h3 className="my-4">Senior Deveeloper</h3>
+        <h3 className="my-4">Desarrollador Senior</h3>
      
 
        
@@ -85,7 +73,7 @@ function OfferInfo() {
                     </div>
 
 
-                    <button variant="contained" type="submit" className="btn btn-block info my-3">Aplicar</button>
+                    <button type="submit" className="btn btn-block info my-3">Aplicar</button>
 
 
                 </div>

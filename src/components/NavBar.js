@@ -38,9 +38,9 @@ export default class NavBar extends Component {
       );
     }
     return (
-      <nav className="navbar navbar-expand px-5 justify-content-between primary">
+      <nav className="navbar navbar-expand px-4 justify-content-between primary">
         <Link to="/" className="navbar-brand">
-          <img src="../logo192.png" className="col-2" />
+          <img width="30" src="../logo192.png" />
         </Link>
         {list}
       </nav>
